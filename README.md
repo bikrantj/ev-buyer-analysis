@@ -7,10 +7,8 @@ Predicting Electric Vehicle Purchase Intent based on Demographics and Infrastruc
 
 | | |
 |---|---|
-| **Project type** | Penalty assignment (internal marks upgrade) |
-| **Author** | _[Your Name]_ |
-| **Roll No. / Course** | _[Roll No.]_ / _[Course Name]_ |
-| **Submission deadline** | 16 October |
+| **Project type** | Data Mining and Machine Learning |
+| **Author** | _Bikrant Jung Budhathoki_ |
 | **Main file** | `EV_Buyer_Analysis.ipynb` |
 | **Language / tools** | Python 3, Jupyter Notebook, pandas, scikit-learn, seaborn |
 
@@ -48,11 +46,11 @@ Whether people buy electric vehicles depends on more than price. Charging infras
 
 **Objectives (as per the assignment):**
 
-| Task | Objective | Marks |
+| Task | Objective |
 |---|---|---|
-| 1 | Exploratory Data Analysis: inspect, clean, summarise and visualise the data; study *City Type vs. home charging* and *Environmental Concern vs. Income* | 5 |
-| 2 | Build and evaluate a binary classifier for `Will_Buy_EV` | 5 |
-| 3 | Build and evaluate a multiclass classifier for `Range_Anxiety_Level` and explain the factors behind it | 5 |
+| 1 | Exploratory Data Analysis: inspect, clean, summarise and visualise the data; study *City Type vs. home charging* and *Environmental Concern vs. Income* |
+| 2 | Build and evaluate a binary classifier for `Will_Buy_EV` |
+| 3 | Build and evaluate a multiclass classifier for `Range_Anxiety_Level` and explain the factors behind it |
 
 ---
 
@@ -234,10 +232,9 @@ Cross-validated macro-F1 of the best model: 0.595 +/- 0.015.
 ```
 .
 ├── EV_Buyer_Analysis.ipynb   # Full analysis: code, outputs, charts and explanations
-└── README.md                 # Project documentation (this file)
+├── dataset.csv                 # Dataset
+└── README.md                 # Project documentation 
 ```
-
-The dataset is **not** stored locally: the notebook downloads it directly from the URL given in Section 3.
 
 **Notebook outline**
 
@@ -286,5 +283,3 @@ Then choose **Kernel > Restart & Run All**.
 The analysis shows that EV adoption in this dataset is shaped mainly by **subsidies, environmental attitude and income**, and that **range anxiety**, which in turn depends mostly on **home charging availability, commute distance and nearby public charging**, is a major barrier. City type influences adoption indirectly because urban buyers far less often have home charging. Random Forest models achieved the best overall balance of performance on both prediction tasks (purchase: F1 0.64; anxiety: macro-F1 0.60), while accounting for the strong class imbalance.
 
 ---
-
-_Dataset: `bikrantj/ev-buyer-analysis` on GitHub. Prepared as part of a penalty assignment for internal marks._
