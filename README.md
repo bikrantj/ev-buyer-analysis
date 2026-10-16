@@ -6,7 +6,7 @@ Predicting Electric Vehicle Purchase Intent based on Demographics and Infrastruc
 
 **Exploratory Data Analysis, EV Purchase Prediction and Range Anxiety Prediction**
 
-## 9. Project Structure
+## Project Structure
 
 ```
 .
@@ -27,7 +27,7 @@ Predicting Electric Vehicle Purchase Intent based on Demographics and Infrastruc
 
 ---
 
-## 10. How to Run
+##  How to Run
 
 ### Option A: Google Colab (easiest)
 1. Open [colab.research.google.com](https://colab.research.google.com), choose **File > Upload notebook**, and select `EV_Buyer_Analysis.ipynb`.
