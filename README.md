@@ -1,9 +1,61 @@
 # ev-buyer-analysis
 Predicting Electric Vehicle Purchase Intent based on Demographics and Infrastructure
 
+
 # Electric Vehicle (EV) Buyer Analysis
 
 **Exploratory Data Analysis, EV Purchase Prediction and Range Anxiety Prediction**
+
+## 9. Project Structure
+
+```
+.
+├── EV_Buyer_Analysis.ipynb   # Full analysis: code, outputs, charts and explanations
+├── dataset.csv                 # Dataset
+└── README.md                 # Project documentation 
+```
+
+**Notebook outline**
+
+| Section | Content |
+|---|---|
+| 0 | Setup and data loading |
+| 1 (Task 1) | 1.1 Inspection, 1.2 Cleaning, 1.3 Descriptive statistics and visualisations, 1.4 City Type vs. home charging, 1.5 Environmental concern vs. income |
+| 2 (Task 2) | 2.1 Features and preprocessing, 2.2 Train/test split, 2.3 Training and evaluation, 2.4 Results and findings |
+| 3 (Task 3) | 3.1 Preprocessing and feature selection, 3.2 Training and evaluation, 3.3 Factors influencing range anxiety, 3.4 Results and discussion |
+| Conclusion | Summary of results and possible improvements |
+
+---
+
+## 10. How to Run
+
+### Option A: Google Colab (easiest)
+1. Open [colab.research.google.com](https://colab.research.google.com), choose **File > Upload notebook**, and select `EV_Buyer_Analysis.ipynb`.
+2. Click **Runtime > Run all**. All libraries used are already installed in Colab.
+
+### Option B: Locally
+
+**Requirements:** Python 3.9 or newer (tested on Python 3.12) and an internet connection (to download the dataset).
+
+```bash
+# 1. (Optional) create a virtual environment
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+
+# 2. Install the dependencies
+pip install numpy pandas scipy matplotlib seaborn scikit-learn jupyter
+
+# 3. Start Jupyter and open the notebook
+jupyter notebook EV_Buyer_Analysis.ipynb
+```
+
+Then choose **Kernel > Restart & Run All**.
+
+**Libraries used:** `numpy`, `pandas`, `scipy`, `matplotlib`, `seaborn`, `scikit-learn` (tested with scikit-learn 1.8.0).
+
+**Reproducibility:** a fixed random seed (`RANDOM_STATE = 42`) is used for all splits and models, so results are repeatable. Small differences may appear with other library versions.
+
+---
 
 | | |
 |---|---|
@@ -24,9 +76,7 @@ Predicting Electric Vehicle Purchase Intent based on Demographics and Infrastruc
 6. [Key Findings and Discussion](#6-key-findings-and-discussion)
 7. [Limitations](#7-limitations)
 8. [Future Work](#8-future-work)
-9. [Project Structure](#9-project-structure)
-10. [How to Run](#10-how-to-run)
-11. [Conclusion](#11-conclusion)
+9. [Conclusion](#11-conclusion)
 
 ---
 
@@ -227,56 +277,7 @@ Cross-validated macro-F1 of the best model: 0.595 +/- 0.015.
 
 ---
 
-## 9. Project Structure
 
-```
-.
-├── EV_Buyer_Analysis.ipynb   # Full analysis: code, outputs, charts and explanations
-├── dataset.csv                 # Dataset
-└── README.md                 # Project documentation 
-```
-
-**Notebook outline**
-
-| Section | Content |
-|---|---|
-| 0 | Setup and data loading |
-| 1 (Task 1) | 1.1 Inspection, 1.2 Cleaning, 1.3 Descriptive statistics and visualisations, 1.4 City Type vs. home charging, 1.5 Environmental concern vs. income |
-| 2 (Task 2) | 2.1 Features and preprocessing, 2.2 Train/test split, 2.3 Training and evaluation, 2.4 Results and findings |
-| 3 (Task 3) | 3.1 Preprocessing and feature selection, 3.2 Training and evaluation, 3.3 Factors influencing range anxiety, 3.4 Results and discussion |
-| Conclusion | Summary of results and possible improvements |
-
----
-
-## 10. How to Run
-
-### Option A: Google Colab (easiest)
-1. Open [colab.research.google.com](https://colab.research.google.com), choose **File > Upload notebook**, and select `EV_Buyer_Analysis.ipynb`.
-2. Click **Runtime > Run all**. All libraries used are already installed in Colab.
-
-### Option B: Locally
-
-**Requirements:** Python 3.9 or newer (tested on Python 3.12) and an internet connection (to download the dataset).
-
-```bash
-# 1. (Optional) create a virtual environment
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-
-# 2. Install the dependencies
-pip install numpy pandas scipy matplotlib seaborn scikit-learn jupyter
-
-# 3. Start Jupyter and open the notebook
-jupyter notebook EV_Buyer_Analysis.ipynb
-```
-
-Then choose **Kernel > Restart & Run All**.
-
-**Libraries used:** `numpy`, `pandas`, `scipy`, `matplotlib`, `seaborn`, `scikit-learn` (tested with scikit-learn 1.8.0).
-
-**Reproducibility:** a fixed random seed (`RANDOM_STATE = 42`) is used for all splits and models, so results are repeatable. Small differences may appear with other library versions.
-
----
 
 ## 11. Conclusion
 
